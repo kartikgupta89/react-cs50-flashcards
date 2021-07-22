@@ -54,7 +54,7 @@
                 super(props);
                 this.state = {
                     editor: true,
-                    cards: [{front: "", back: ""}]
+                    cards: []
                 };
             }
 
@@ -94,7 +94,7 @@
                 this.setState(state => {
                     const tmp = [...state.cards];
                     tmp.splice(index, 1);
-                    return {cards: tmp};
+                    return {cards: [...tmp]};
                 })
             }
         }
